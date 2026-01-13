@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAKLORA</title>
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #b97230;
+    flex-wrap: wrap;
+}
+
+.img img {
+    width: 160px;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #007BFF;
+}
+
+.text {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.about {
+    background-color: rgb(209, 180, 163);
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 20px;
+    margin: 0 40px;
+}
+
+.para {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 500px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    border-radius: 20px;
+    margin: 0 40px;
+}
+
+.parent div {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.parent div:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.div1 img,
+.div2 img,
+.div3 img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.div1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.div2 {
+    grid-column: 3 / span 2;
+    grid-row: span 2;
+}
+
+.div3 {
+    grid-column: 5 / span 2;
+    grid-row: span 2;
+}
+
+footer p.lapara {
+    font-family: cursive;
+    font-size: 16px;
+    margin: 10px 0 0 0;
+}
+
+footer .footer-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 992px) {
+    ul {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    li {
+        margin: 8px 10px;
+    }
+
+    .img img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        margin: 0 10px;
+    }
+
+    .parent {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        margin: 0 10px;
+    }
+
+    .div1, .div2, .div3 {
+        grid-column: span 2 !important;
+        grid-row: auto !important;
+    }
+
+    .div1 img, .div2 img, .div3 img {
+        width: 100%;
+        height: 200px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="img">
+        <img src="./assets/logo.png" alt="logo">
+    </div>
+    <div>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="carouselExampleDark" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/i1.png" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/i2.png" class="d-block w-100" alt="">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/i3.png" class="d-block w-100" alt="">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="text">
+    <h5>Flat <span style="background-color: yellow; border-radius: 100px;"> 20% </span>off</h5>
+</div>
+
+<div id="about">
+    <h1 class="text">About us</h1>
+</div>
+
+<div class="about">
+   <div><img src="./assets/i4.png" alt="" style="width:100%; height:auto;"></div> 
+   <div class="para">
+    <p>Founded by pastry chef Clara, CAKLORA started as a small home bakery with a big dream: to spread joy through delicious, beautiful baked goods. Our name combines "cake" and "flora" – representing our belief that every dessert should be as delightful as a blooming flower.
+<br><br> Visit our cozy bakery and experience the magic of freshly baked happiness!</p>
+   </div>
+</div>
+<br>
+
+<div id="menu"><h2 class="text"><b>Our Menu</b></h2></div>
+
+<div class="parent">
+    <div class="div1"><img src="./assets/i5.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+    <div class="div2"><img src="./assets/i6.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+    <div class="div3"><img src="./assets/i7.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+</div>
+
+<div class="parent">
+    <div class="div1"><img src="./assets/i8.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+    <div class="div2"><img src="./assets/i9.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+    <div class="div3"><img src="./assets/i10.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+</div>
+
+<div class="parent">
+    <div class="div1"><img src="./assets/i11.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+    <div class="div2"><img src="./assets/i12.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+    <div class="div3"><img src="./assets/i13.png" alt=""><br><center><br><button type="button" class="btn btn-warning">Add to cart</button></center><br></div>
+</div>
+
+<footer id="contact" class="bg-dark text-white text-center p-3 mt-4">
+<img src="./assets/logo.png" alt="" width="200px" height="50px"><br><br>
+Email: caklora@gmail.com
+<br><br>
+<p class="lapara">Freshly baked happiness since 2015</p><br><br>
+<div class="footer-nav">
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+<br><br>
+&copy; 2024 CAKLORA. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
